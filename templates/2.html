@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 18th Birthday!</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap');
+
+    :root {
+      --primary: #ff6b6b;
+      --secondary: #4ecdc4;
+      --accent: #ffd166;
+      --dark: #2a2a2a;
+      --light: #fffcf9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #f2d74e;
+      position: absolute;
+      left: 50%;
+      animation: confetti 5s ease-in-out -2s infinite;
+      transform-origin: left top;
+      z-index: 100;
+    }
+
+    .confetti:nth-child(1) {
+      background-color: var(--primary);
+      left: 10%;
+      animation-delay: 0;
+    }
+
+    .confetti:nth-child(2) {
+      background-color: var(--secondary);
+      left: 20%;
+      animation-delay: -5s;
+    }
+
+    .confetti:nth-child(3) {
+      background-color: var(--accent);
+      left: 30%;
+      animation-delay: -3s;
+    }
+
+    .confetti:nth-child(4) {
+      background-color: #7b5be6;
+      left: 40%;
+      animation-delay: -2.5s;
+    }
+
+    .confetti:nth-child(5) {
+      background-color: #01c5c4;
+      left: 50%;
+      animation-delay: -4s;
+    }
+
+    .confetti:nth-child(6) {
+      background-color: #fb8a93;
+      left: 60%;
+      animation-delay: -6s;
+    }
+
+    .confetti:nth-child(7) {
+      background-color: var(--primary);
+      left: 70%;
+      animation-delay: -1.5s;
+    }
+
+    .confetti:nth-child(8) {
+      background-color: var(--secondary);
+      left: 80%;
+      animation-delay: -2s;
+    }
+
+    .confetti:nth-child(9) {
+      background-color: var(--accent);
+      left: 90%;
+      animation-delay: -3.5s;
+    }
+
+    .confetti:nth-child(10) {
+      background-color: #7b5be6;
+      left: 100%;
+      animation-delay: -2.75s;
+    }
+
+    @keyframes confetti {
+      0% {
+        transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+        opacity: 1;
+      }
+
+      25% {
+        transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+      }
+
+      50% {
+        transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 40vh);
+      }
+
+      75% {
+        transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 60vh);
+      }
+
+      100% {
+        transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 80vh);
+        opacity: 0;
+      }
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #ff9a8b);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Navigation styling */
+    nav {
+      background-color: white;
+      border-radius: 50px;
+      padding: 0.5rem;
+      display: inline-flex;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 10;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      z-index: -1;
+    }
+
+    nav a:hover::before {
+      transform: translateY(0);
+    }
+
+    nav a.active {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Home section with cake */
+    #home {
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    .cake-container {
+      margin: 2rem auto;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(2deg);
+      }
+    }
+
+    .cake {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+
+    .cake-base {
+      position: absolute;
+      width: 200px;
+      height: 40px;
+      bottom: 0;
+      background: linear-gradient(135deg, #f7c6c6, #ffa5a5);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .cake-middle {
+      position: absolute;
+      width: 180px;
+      height: 45px;
+      bottom: 40px;
+      left: 10px;
+      background: linear-gradient(135deg, #ffecb3, #ffe082);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .cake-top {
+      position: absolute;
+      width: 160px;
+      height: 50px;
+      bottom: 85px;
+      left: 20px;
+      background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 3;
+    }
+
+    .candle {
+      position: absolute;
+      width: 10px;
+      height: 30px;
+      bottom: 135px;
+      left: 95px;
+      background: linear-gradient(135deg, #e0e0e0, #bdbdbd);
+      border-radius: 5px;
+      z-index: 4;
+    }
+
+    .flame {
+      position: absolute;
+      width: 15px;
+      height: 30px;
+      bottom: 165px;
+      left: 92.5px;
+      background: linear-gradient(135deg, #ffeb3b, #ff5722);
+      border-radius: 50% 50% 20% 20%;
+      transform-origin: bottom;
+      animation: flicker 1s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.7);
+      z-index: 5;
+    }
+
+    @keyframes flicker {
+
+      0%,
+      100% {
+        transform: scaleY(1) rotate(-2deg);
+        opacity: 1;
+      }
+
+      25% {
+        transform: scaleY(1.1) rotate(3deg);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: scaleY(0.9) rotate(-3deg);
+        opacity: 1;
+      }
+
+      75% {
+        transform: scaleY(1.05) rotate(2deg);
+        opacity: 0.9;
+      }
+    }
+
+    .decoration {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      z-index: 6;
+    }
+
+    .decoration1 {
+      bottom: 20px;
+      left: 30px;
+      background-color: var(--primary);
+    }
+
+    .decoration2 {
+      bottom: 25px;
+      left: 60px;
+      background-color: var(--secondary);
+    }
+
+    .decoration3 {
+      bottom: 15px;
+      left: 90px;
+      background-color: #7b5be6;
+    }
+
+    .decoration4 {
+      bottom: 20px;
+      left: 120px;
+      background-color: var(--primary);
+    }
+
+    .decoration5 {
+      bottom: 25px;
+      left: 150px;
+      background-color: var(--secondary);
+    }
+
+    .decoration6 {
+      bottom: 65px;
+      left: 25px;
+      background-color: var(--primary);
+    }
+
+    .decoration7 {
+      bottom: 70px;
+      left: 50px;
+      background-color: var(--secondary);
+    }
+
+    .decoration8 {
+      bottom: 65px;
+      left: 80px;
+      background-color: #7b5be6;
+    }
+
+    .decoration9 {
+      bottom: 70px;
+      left: 110px;
+      background-color: var(--primary);
+    }
+
+    .decoration10 {
+      bottom: 65px;
+      left: 140px;
+      background-color: var(--secondary);
+    }
+
+    .decoration11 {
+      bottom: 110px;
+      left: 35px;
+      background-color: var(--primary);
+    }
+
+    .decoration12 {
+      bottom: 115px;
+      left: 65px;
+      background-color: var(--secondary);
+    }
+
+    .decoration13 {
+      bottom: 110px;
+      left: 95px;
+      background-color: #7b5be6;
+    }
+
+    .decoration14 {
+      bottom: 115px;
+      left: 125px;
+      background-color: var(--primary);
+    }
+
+    .section {
+      margin: 4rem 0;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--primary);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Gallery section */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      height: 200px;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Messages section */
+    .messages {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .message-card {
+      perspective: 1000px;
+      height: 250px;
+      /* Increased height for better content visibility */
+    }
+
+    .message-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .message-card.flipped .message-inner {
+      transform: rotateY(180deg);
+    }
+
+    .message-front,
+    .message-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message-front {
+      background: linear-gradient(135deg, #fff, #f8f9fa);
+      text-align: center;
+      justify-content: center;
+    }
+
+    .message-back {
+      background-color: #fef9f9;
+      transform: rotateY(180deg);
+      overflow-y: auto;
+      justify-content: flex-start;
+      padding-right: 10px;
+    }
+
+    .message-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .message-hint {
+      font-size: 0.9rem;
+      color: #868e96;
+      margin-top: 1rem;
+    }
+
+    .message-author {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .message-content {
+      font-style: italic;
+      line-height: 1.6;
+      padding-bottom: 10px;
+      overflow-wrap: break-word;
+    }
+
+    /* Add scrollbar styling for better visibility */
+    .message-back::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .message-back::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .message-back::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    .message-back::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary);
+    }
+
+    /* Fun Videos section */
+    .fun-videos {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .video-prompt {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .video-options {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      min-height: 50px;
+    }
+
+    .video-option {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .video-option:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-option.no {
+      background: white;
+      color: var(--dark);
+      border: 2px solid #e9ecef;
+      position: relative;
+      transition: all 0.3s ease, left 0.2s ease, top 0.2s ease;
+    }
+
+    .video-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .video-item {
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .video-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-placeholder {
+      height: 200px;
+      background-color: #e9ecef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #868e96;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .video-title {
+      padding: 1rem;
+      font-weight: 600;
+    }
+
+
+    /* Certificate section */
+    .certificate {
+      margin-top: 2rem;
+      border: 10px solid #f3d250;
+      padding: 2rem;
+      background-color: #fffdf7;
+      text-align: center;
+      position: relative;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .certificate::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f3d250' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .certificate-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .certificate-text {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .certificate-name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      border-bottom: 2px solid var(--dark);
+      display: inline-block;
+      padding: 0 2rem 0.5rem;
+    }
+
+    .certificate-date {
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    .seal {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      width: 100px;
+      height: 100px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transform: rotate(-15deg);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: rotate(-15deg) scale(1);
+      }
+
+      50% {
+        transform: rotate(-15deg) scale(1.05);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background-color: var(--dark);
+      color: white;
+      margin-top: 4rem;
+    }
+
+    .footer-text {
+      margin-bottom: 1rem;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Animation classes */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0.25rem;
+      }
+
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+
+      .video-options {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Confetti elements -->
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+
+  <header>
+    <h1 class="title">Happy 18th Birthday!</h1>
+    <p class="subtitle">Welcome Chingiiiii </p>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#messages">Messages</a>
+
+      <a href="#videos">Fun Videos</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="container">
+      <h2 class="section-title">HAAPPYYY BIRTHDAYYYYY</h2>
+      <p>leeeeeeeee cake khaa</p>
+
+      <div class="cake-container">
+        <div class="cake">
+          <div class="cake-base"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-top"></div>
+          <div class="candle"></div>
+          <div class="flame"></div>
+          <div class="decoration decoration1"></div>
+          <div class="decoration decoration2"></div>
+          <div class="decoration decoration3"></div>
+          <div class="decoration decoration4"></div>
+          <div class="decoration decoration5"></div>
+          <div class="decoration decoration6"></div>
+          <div class="decoration decoration7"></div>
+          <div class="decoration decoration8"></div>
+          <div class="decoration decoration9"></div>
+          <div class="decoration decoration10"></div>
+          <div class="decoration decoration11"></div>
+          <div class="decoration decoration12"></div>
+          <div class="decoration decoration13"></div>
+          <div class="decoration decoration14"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title">Memory Gallery</h2>
+      <p>Chingi kee sexyy photos 💦💦</p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="/static/chingi1.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi2.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi3.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi4.jpg" alt="Birthday memory">
+        </div>
+
+        <div class="gallery-item">
+          <img src="/static/chingi6.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi7.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi8.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi9.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi10.jpg" alt="Birthday memory">
+        </div>
+
+        <div class="gallery-item">
+          <img src="/static/chingi12.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi14.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi15.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi17.jpg" alt="Birthday memory">
+        </div>
+        <div class="gallery-item">
+          <img src="/static/chingi16.jpg" alt="Birthday memory">
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="messages" class="section">
+    <div class="container">
+      <h2 class="section-title">Birthday Messages</h2>
+      <p>Click on the cards to read special messages from your friends and family!</p>
+
+      <div class="messages">
+        <div class="message-card">
+          <div class="message-inner">
+            <div class="message-front">
+              <h3 class="message-name">Ninja</h3>
+              <p class="message-hint">Click to read message</p>
+            </div>
+            <div class="message-back">
+              <h4 class="message-author">From Ninja</h4>
+              <p class="message-content">HAAPPYY BIRTHDAY MEREE CHINGIII. Abb judwa bolu chingi bolu momo bolu sabb ek
+                hi chiz hai janta hu, dekh waise toh mai zyada bolta nahi hu still aaj sunle chall teri thodi tareef kr
+                deta hu warna royega
+                Haan toh tuu ek number ka gadha hai, ahem anyways tuu mera judwa hai, brother from another mother. Tuu
+                na hota pata nahi meri bakwas kon sunta, aaj tu 18 ka ho gaaya no more a minor, abb baccho ko ched nahi
+                sakta dekh batadu mai. Well haan also since tu abb minor nahi raha💀 mai💀💀💀 kuch bhi💀💀 kar sakta ab
+                tere sath💀💀💀💀💀💀💀 well anyways haan toh, abb zaraa kaamm kharcha kariyo paisa💀, faltu ka udana
+                band kar and learn to split among friends. Sab log bas tareefe krege aaj and mai gyaan chodunga hehe.
+                Abb bacha nahi raha tuu thoda dimaag bhi use kr liya kar🙂👍
+                Anyways zyada lamba ho raha ab ye, ek orr baar HAAPPIESSTT BIRTHDAY MUNNAAA
+                And haan hum hi lenge teri sabse pehle yaad hai na? (Mai, soham) terko thoda sa gyaan denge on
+                practicals🥰🥰 anyways mai rahega ji apke sath end tak💀👍 and terko bhi rehna pdega (abb meri wali ka
+                bhi to set Tu krwaega na) anyways chal bas hai itna huurr hoja ab</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-card">
+          <div class="message-inner">
+            <div class="message-front">
+              <h3 class="message-name">Soham</h3>
+              <p class="message-hint">Click to read message</p>
+            </div>
+            <div class="message-back">
+              <h4 class="message-author">From Soham</h4>
+              <p class="message-content">wsg bbg ved, its been almost 5+ years i believe idk of knowing eachother nd my
+                god we lowk tight as hell, thru the times we changed SOO much not just our relationship together but
+                ourselves as individuals as well, i lowk find ts (this) corny but icl we close enough to make me do ts
+                (this) so yes, another year of watching you grow old loveyou lots mwah, stay safe gang nd happiest
+                birthday to my roomate(?)(potentially?)(mayhaps?)(fr?)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-card">
+          <div class="message-inner">
+            <div class="message-front">
+              <h3 class="message-name">Ari</h3>
+              <p class="message-hint">Click to read message</p>
+            </div>
+            <div class="message-back">
+              <h4 class="message-author">From Ari</h4>
+              <p class="message-content">ved
+                happy birthday vedant my favourite chink, i love you so much and im so so grateful i could see you grow
+                all these years. UR friendship means so much to me my guy ur my 4lifer. BITCH IVE SEEN ALL YOUR PHASES
+                OML A PARAGRAPH ISNT ENOUGH TO APPRECIATE YOU BRO the shit we’ve went through together ladle 18 ka horha
+                h kinda crazy… bro’s legal now, would you drive us to get cheesecake? okay im getting off topic i think
+                i love you and youre my best best friend ever, thank u for being such a blessing for all of us istg u
+                deserve all the love in this megaverse and i want you to enjoy your day so much ved please make the best
+                out of this YEAR matter of fact, also kam valo khel aur kam soya kar. happy birthday to my fav chink
+                chicken tandoori momos ambassador chattisgarh resident (still cant believe its real), eboy weeknd lovr
+                kpop fan vivek doppleganger. to the nigga who’s stuck with me through all my highs and lows, who always
+                listened to me when i was crashing out or peaking, i promise to do the same to you. always. i hope we
+                can meetup soon and i hope our bhaichara always persists I KNOW IT WILL you’re my goat and i mean it</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-card">
+          <div class="message-inner">
+            <div class="message-front">
+              <h3 class="message-name">Tripti</h3>
+              <p class="message-hint">Click to read message</p>
+            </div>
+            <div class="message-back">
+              <h4 class="message-author">From Tripti</h4>
+              <p class="message-content">happy bday baby :3
+                guess the gang will finally stop calling me a pedo, lowk sad ngl... but... I guess that's what life is💔
+                I feel like a mom watching you grow up from the toddler you used to be to this hormonal teenager who
+                challenges mythical creatures in terms of hibernation. other than that, you're a good homie I love you
+                sm you get me bro like frfr you get me😞 vibe be matching w you on another level, ntm you match my freak
+                to a crazy level too😞 I wonder where had you been all this while but thank the lord i met this cool
+                highkey idiot and dense homie imma cherish you forever frfr i love you sm happy 18th you match my age
+                too once again🙄
+                i refuse to believe you're an adult now cause ain't no way you're an adult like look at you you're still
+                a kid from heart and mind both🥰ehem okay bye I love you happy bday love you love you I hope you like
+                the gifts when they arrive cause you live under mauna kea or smth :3</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-card">
+          <div class="message-inner">
+            <div class="message-front">
+              <h3 class="message-name">Prisha</h3>
+              <p class="message-hint">Click to read message</p>
+            </div>
+            <div class="message-back">
+              <h4 class="message-author">From Prisha</h4>
+              <p class="message-content">IT’S YOUR BIRTHDAY, YOU sweetie.
+                Honestly, man toh karta hai tujhe goli se maar du, but kya kru, helpless hu na. Stop keeping everything
+                to yourself. Talk, share—don’t act like some lone warrior. You have people who love you, so text or
+                call—no tax lagta. I swear, if you keep isolating, I WILL FLY KICK YOU.
+
+                Despite your nonsense, I still love you, you annoying, isolating, slightly stupid human. Thanks for
+                being there, making me laugh, and making things feel lighter. You just matter, even when you’re being
+                dumb.
+
+                And Tripti—she’s the best thing that’s happened to you. I’m so damn proud you brought her back. You two
+                just fit, and it makes me happy. NEVER mess this up—she’s a keeper.
+
+                Happy birthday, best friend. Remember, kuch bhi ho, share kar lena. I AM THERE. 💗🎀🫶</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-card">
+          <div class="message-inner">
+            <div class="message-front">
+              <h3 class="message-name">Chingu</h3>
+              <p class="message-hint">Click to read message</p>
+            </div>
+            <div class="message-back">
+              <h4 class="message-author">From Chingu</h4>
+              <p class="message-content">Hey Vedansh!
+                Happy Birthday, buddy! 🎉
+                I just want to take a moment to remind you of how much you mean to the people who love you—especially
+                Tripti. She’s beyond happy to have you back in her life, and you have no idea how much light and joy
+                you’ve brought back to her heart. You two have this beautiful connection that’s truly one of a kind, and
+                seeing you both find your way back to each other just proves how strong that bond is.
+
+                You’ve always had this calm, grounded energy that makes people feel safe, and your thoughtful, caring
+                nature is something really special. I know life has been challenging lately, but you’ve shown so much
+                strength and resilience. No matter what comes your way, you’re going to make it through, and Tripti’s
+                right there with you, cheering you on.
+
+                This year, I hope you find more peace and happiness, and I hope you keep holding onto the beautiful
+                dreams and visions that give you hope. You and Tripti have something rare and precious—never lose sight
+                of that.
+
+                Wishing you a day filled with love, good vibes, and some well-deserved smiles. You’re cherished more
+                than you know.
+                Happy Birthday once again! 🎂</p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  </div>
+  </div>
+  </section>
+
+
+  <section id="videos" class="section">
+    <div class="container">
+      <h2 class="section-title">Fun Videos</h2>
+      <p class="video-prompt">Check out these fun videos we've gathered for your birthday!</p>
+
+      <div class="fun-videos">
+        <div class="video-options">
+          <button class="video-option yes">Dikha</button>
+          <button class="video-option no">Nai dekhna</button>
+        </div>
+
+        <div class="video-grid">
+          <div class="video-item">
+            <div class="video-placeholder">
+              <video width="100%" height="100%" controls>
+                <source src="/static/comedy1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-title">Mai hu dancer.</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-placeholder">
+              <video width="100%" height="100%" controls>
+                <source src="/static/comedy3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-title">Lessgoooooooo.</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-placeholder">
+              <video width="100%" height="100%" controls>
+                <source src="/static/comedy4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-title">Thari behen ka ladla</div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-placeholder">
+              <video width="100%" height="100%" controls>
+                <source src="/static/comedy5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-title">Duniya ki unreachable jagah </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-placeholder">
+              <video width="100%" height="100%" controls>
+                <source src="/static/comedy2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-title">Rickrolled lmao</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="certificate">
+    <h2 class="certificate-title">Official Certificate</h2>
+    <p class="certificate-text">This certifies that</p>
+    <p class="certificate-name">CHINGI</p>
+    <p class="certificate-text">has officially turned 18 years old and is hereby granted all the rights, privileges, and
+      responsibilities of adulthood. May your journey be filled with joy, success, and wonderful memories!</p>
+    <p class="certificate-date">March 15, 2025</p>
+    <div class="seal">OFFICIAL<br>18th<br>BIRTHDAY</div>
+  </div>
+  </div>
+  </section>
+
+  <footer>
+    <p class="footer-text">Tere birthday ke liye special banayi hai CHINGI</p>
+    <a href="#home" class="back-to-top">Back to Top</a>
+  </footer>
+
+  <script>
+    // Message card flip functionality
+    const messageCards = document.querySelectorAll('.message-card');
+    messageCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+
+    // Video section functionality
+    const showButton = document.querySelector('.video-option.yes');
+    const hideButton = document.querySelector('.video-option.no');
+    const videoGrid = document.querySelector('.video-grid');
+
+    showButton.addEventListener('click', () => {
+      videoGrid.style.display = 'grid';
+    });
+
+    hideButton.addEventListener('click', () => {
+      // Make the "No" button dodge the cursor
+      hideButton.style.position = 'relative';
+      hideButton.style.left = Math.random() * 100 - 50 + 'px';
+      hideButton.style.top = Math.random() * 100 - 50 + 'px';
+    });
+
+    // Navigation active state
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    // When scrolling, update active nav item
+    window.addEventListener('scroll', () => {
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (window.pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scrolling for nav links
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Back to top button
+    const backToTop = document.querySelector('.back-to-top');
+    backToTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Animate sections when they come into view
+    const allSections = document.querySelectorAll('.section');
+
+    const fadeInObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          fadeInObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    allSections.forEach(section => {
+      fadeInObserver.observe(section);
+    });
+  </script>
+</body>
+
+</html>

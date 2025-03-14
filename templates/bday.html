@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 18th Birthday!</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap');
+    
+    :root {
+      --primary: #ff6b6b;
+      --secondary: #4ecdc4;
+      --accent: #ffd166;
+      --dark: #2a2a2a;
+      --light: #fffcf9;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+    
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #f2d74e;
+      position: absolute;
+      left: 50%;
+      animation: confetti 5s ease-in-out -2s infinite;
+      transform-origin: left top;
+      z-index: 100;
+    }
+    
+    .confetti:nth-child(1) {
+      background-color: var(--primary);
+      left: 10%;
+      animation-delay: 0;
+    }
+    
+    .confetti:nth-child(2) {
+      background-color: var(--secondary);
+      left: 20%;
+      animation-delay: -5s;
+    }
+    
+    .confetti:nth-child(3) {
+      background-color: var(--accent);
+      left: 30%;
+      animation-delay: -3s;
+    }
+    
+    .confetti:nth-child(4) {
+      background-color: #7b5be6;
+      left: 40%;
+      animation-delay: -2.5s;
+    }
+    
+    .confetti:nth-child(5) {
+      background-color: #01c5c4;
+      left: 50%;
+      animation-delay: -4s;
+    }
+    
+    .confetti:nth-child(6) {
+      background-color: #fb8a93;
+      left: 60%;
+      animation-delay: -6s;
+    }
+    
+    .confetti:nth-child(7) {
+      background-color: var(--primary);
+      left: 70%;
+      animation-delay: -1.5s;
+    }
+    
+    .confetti:nth-child(8) {
+      background-color: var(--secondary);
+      left: 80%;
+      animation-delay: -2s;
+    }
+    
+    .confetti:nth-child(9) {
+      background-color: var(--accent);
+      left: 90%;
+      animation-delay: -3.5s;
+    }
+    
+    .confetti:nth-child(10) {
+      background-color: #7b5be6;
+      left: 100%;
+      animation-delay: -2.75s;
+    }
+    
+    @keyframes confetti {
+      0% {
+        transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+        opacity: 1;
+      }
+      25% {
+        transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+      }
+      50% {
+        transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 40vh);
+      }
+      75% {
+        transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 60vh);
+      }
+      100% {
+        transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 80vh);
+        opacity: 0;
+      }
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), #ff9a8b);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .title {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Navigation styling */
+    nav {
+      background-color: white;
+      border-radius: 50px;
+      padding: 0.5rem;
+      display: inline-flex;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 10;
+      margin-top: 1rem;
+    }
+    
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    nav a:hover {
+      color: white;
+    }
+    
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      z-index: -1;
+    }
+    
+    nav a:hover::before {
+      transform: translateY(0);
+    }
+    
+    nav a.active {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    /* Home section with cake */
+    #home {
+      text-align: center;
+      padding: 3rem 0;
+    }
+    
+    .cake-container {
+      margin: 2rem auto;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      animation: float 5s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0);
+      }
+      50% {
+        transform: translateY(-20px) rotate(2deg);
+      }
+    }
+    
+    .cake {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    
+    .cake-base {
+      position: absolute;
+      width: 200px;
+      height: 40px;
+      bottom: 0;
+      background: linear-gradient(135deg, #f7c6c6, #ffa5a5);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    
+    .cake-middle {
+      position: absolute;
+      width: 180px;
+      height: 45px;
+      bottom: 40px;
+      left: 10px;
+      background: linear-gradient(135deg, #ffecb3, #ffe082);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+    
+    .cake-top {
+      position: absolute;
+      width: 160px;
+      height: 50px;
+      bottom: 85px;
+      left: 20px;
+      background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 3;
+    }
+    
+    .candle {
+      position: absolute;
+      width: 10px;
+      height: 30px;
+      bottom: 135px;
+      left: 95px;
+      background: linear-gradient(135deg, #e0e0e0, #bdbdbd);
+      border-radius: 5px;
+      z-index: 4;
+    }
+    
+    .flame {
+      position: absolute;
+      width: 15px;
+      height: 30px;
+      bottom: 165px;
+      left: 92.5px;
+      background: linear-gradient(135deg, #ffeb3b, #ff5722);
+      border-radius: 50% 50% 20% 20%;
+      transform-origin: bottom;
+      animation: flicker 1s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.7);
+      z-index: 5;
+    }
+    
+    @keyframes flicker {
+      0%, 100% {
+        transform: scaleY(1) rotate(-2deg);
+        opacity: 1;
+      }
+      25% {
+        transform: scaleY(1.1) rotate(3deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scaleY(0.9) rotate(-3deg);
+        opacity: 1;
+      }
+      75% {
+        transform: scaleY(1.05) rotate(2deg);
+        opacity: 0.9;
+      }
+    }
+    
+    .decoration {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      z-index: 6;
+    }
+    
+    .decoration1 { bottom: 20px; left: 30px; background-color: var(--primary); }
+    .decoration2 { bottom: 25px; left: 60px; background-color: var(--secondary); }
+    .decoration3 { bottom: 15px; left: 90px; background-color: #7b5be6; }
+    .decoration4 { bottom: 20px; left: 120px; background-color: var(--primary); }
+    .decoration5 { bottom: 25px; left: 150px; background-color: var(--secondary); }
+    .decoration6 { bottom: 65px; left: 25px; background-color: var(--primary); }
+    .decoration7 { bottom: 70px; left: 50px; background-color: var(--secondary); }
+    .decoration8 { bottom: 65px; left: 80px; background-color: #7b5be6; }
+    .decoration9 { bottom: 70px; left: 110px; background-color: var(--primary); }
+    .decoration10 { bottom: 65px; left: 140px; background-color: var(--secondary); }
+    .decoration11 { bottom: 110px; left: 35px; background-color: var(--primary); }
+    .decoration12 { bottom: 115px; left: 65px; background-color: var(--secondary); }
+    .decoration13 { bottom: 110px; left: 95px; background-color: #7b5be6; }
+    .decoration14 { bottom: 115px; left: 125px; background-color: var(--primary); }
+    
+    .section {
+      margin: 4rem 0;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--primary);
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Gallery section */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      height: 200px;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    /* Messages section */
+    .messages {
+      margin-top: 2rem;
+    }
+    
+    .message-item {
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .message-item:hover {
+      transform: translateX(5px);
+      background-color: #fef9f9;
+    }
+    
+    .message-author {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .message-content {
+      font-style: italic;
+      line-height: 1.6;
+    }
+    
+    /* Quiz section */
+    .quiz-container {
+      margin-top: 2rem;
+    }
+    
+    .quiz-question {
+      margin-bottom: 2rem;
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .question-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .quiz-option {
+      background-color: white;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .quiz-option:hover {
+      background-color: #f1f3f5;
+      border-color: #ced4da;
+      transform: translateY(-3px);
+    }
+    
+    .quiz-option.selected {
+      background-color: var(--secondary);
+      color: white;
+      border-color: var(--secondary);
+    }
+    
+    .quiz-submit {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .quiz-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Fun Videos section */
+    .fun-videos {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .video-prompt {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .video-options {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .video-option {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .video-option:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .video-option.no {
+      background: white;
+      color: var(--dark);
+      border: 2px solid #e9ecef;
+    }
+    
+    .video-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .video-item {
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .video-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .video-placeholder {
+      height: 200px;
+      background-color: #e9ecef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #868e96;
+    }
+    
+    .video-title {
+      padding: 1rem;
+      font-weight: 600;
+    }
+    
+    /* Future Letter section */
+    .future-letter {
+      margin-top: 2rem;
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 15px;
+      position: relative;
+    }
+    
+    .future-letter::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ff6b6b' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      z-index: 0;
+      border-radius: 15px;
+      pointer-events: none;
+    }
+    
+    .letter-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Certificate section */
+    .certificate {
+      margin-top: 2rem;
+      border: 10px solid #f3d250;
+      padding: 2rem;
+      background-color: #fffdf7;
+      text-align: center;
+      position: relative;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .certificate::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f3d250' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .certificate-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    
+    .certificate-text {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .certificate-name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      border-bottom: 2px solid var(--dark);
+      display: inline-block;
+      padding: 0 2rem 0.5rem;
+    }
+    
+    .certificate-date {
+      margin-top: 1rem;
+      font-style: italic;
+    }
+    
+    .seal {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      width: 100px;
+      height: 100px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transform: rotate(-15deg);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: rotate(-15deg) scale(1);
+      }
+      50% {
+        transform: rotate(-15deg) scale(1.05);
+      }
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background-color: var(--dark);
+      color: white;
+      margin-top: 4rem;
+    }
+    
+    .footer-text {
+      margin-bottom: 1rem;
+    }
+    
+    .back-to-top {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    /* Animation classes */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1.2rem;
+      }
+      
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav a {
+        padding: 0.5rem 1rem;
+      }
+      
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Confetti elements -->
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+
+  <header>
+    <h1 class="title">Happy 18th Birthday!</h1>
+    <p class="subtitle">Welcome to the celebration of [Birthday Boy's Name]!</p>
+    <nav>
+      <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+      <a href="#messages"><i class="fas fa-comment-dots"></i> Messages</a>
+      <a href="#quiz"><i class="fas fa-question-circle"></i> Quiz</a>
+      <a href="#fun-videos"><i class="fas fa-video"></i> Fun Videos</a>
+      <a href="#future-letter"><i class="fas fa-envelope"></i> Future Letter</a>
+      <a href="#certificate"><i class="fas fa-certificate"></i> Certificate</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="home" class="section fade-in">
+      <h2 class="section-title">Welcome to the Party!</h2>
+      <p>Today we celebrate an amazing friend turning 18! Get ready for a journey through memories, messages, and fun activities to honor this special day.</p>
+      
+      <div class="cake-container">
+        <div class="cake">
+          <div class="cake-base"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-top"></div>
+          <div class="candle"></div>
+          <div class="flame"></div>
+          <div class="decoration decoration1"></div>
+          <div class="decoration decoration2"></div>
+          <div class="decoration decoration3"></div>
+          <div class="decoration decoration4"></div>
+          <div class="decoration decoration5"></div>
+          <div class="decoration decoration6"></div>
+          <div class="decoration decoration7"></div>
+          <div class="decoration decoration8"></div>
+          <div class="decoration decoration9"></div>
+          <div class="decoration decoration10"></div>
+          <div class="decoration decoration11"></div>
+          <div class="decoration decoration12"></div>
+          <div class="decoration decoration13"></div>
+          <div class="decoration decoration14"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section fade-in">
+      <h2 class="section-title">Memory Gallery</h2>
+      <p>A look back at some of our favorite moments together!</p>
+      
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="/api/placeholder/400/320" alt="placeholder" />
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/400/320" alt="placeholder" />
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/400/320" alt="placeholder" />
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/400/320" alt="placeholder" />
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/400/320" alt="placeholder" />
+        </div>
+        <div class="gallery-item">
+          <img src="/api/placeholder/400/320" alt="placeholder" />
+        </div>
+      </div>
+    </section>
+
+    <section id="messages" class="section fade-in">
+      <h2 class="section-title">Birthday Messages</h2>
+      <p>Friends and family share their love and wishes!</p>
+      
+      <div class="messages">
+        <div class="message-item">
+          <div class="message-author">From Mom & Dad</div>
+          <div class="message-content">Happy 18th birthday to our amazing child! We are so proud of the person you have become. Your kindness, intelligence, and determination inspire us every day. May your journey into adulthood be filled with joy, success, and endless opportunities. We love you more than words can express!</div>
+        </div>
+        <div class="message-item">
+          <div class="message-author">From Your Best Friend</div>
+          <div class="message-content">Dude! Can't believe you're finally 18! We've been through so much together, and I can't wait to see what crazy adventures we'll have next. You're the best friend anyone could ask for. Happy birthday, and let's make this year the most epic yet!</div>
+        </div>
+        <div class="message-item">
+          <div class="message-author">From Your Favorite Teacher</div>
+          <div class="message-content">Congratulations on reaching this milestone! It's been a privilege to watch you grow and develop your talents. Your enthusiasm and dedication to learning will take you far. I have no doubt you'll accomplish great things in the years ahead. Happy 18th birthday!</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section fade-in">
+      <h2 class="section-title">Birthday Quiz</h2>
+      <p>How well do you know the birthday person? Test your knowledge!</p>
+      
+      <div class="quiz-container">
+        <div class="quiz-question">
+          <div class="question-text">1. What is [Birthday Person]'s favorite food?</div>
+          <div class="quiz-options">
+            <div class="quiz-option">Pizza</div>
+            <div class="quiz-option">Sushi</div>
+            <div class="quiz-option">Tacos</div>
+            <div class="quiz-option">Pasta</div>
+          </div>
+        </div>
+        
+        <div class="quiz-question">
+          <div class="question-text">2. Which of these is [Birthday Person]'s dream destination?</div>
+          <div class="quiz-options">
+            <div class="quiz-option">Paris, France</div>
+            <div class="quiz-option">Tokyo, Japan</div>
+            <div class="quiz-option">New York, USA</div>
+            <div class="quiz-option">Sydney, Australia</div>
+          </div>
+        </div>
+        
+        <div class="quiz-question">
+          <div class="question-text">3. What is [Birthday Person]'s favorite hobby?</div>
+          <div class="quiz-options">
+            <div class="quiz-option">Reading</div>
+            <div class="quiz-option">Gaming</div>
+            <div class="quiz-option">Playing music</div>
+            <div class="quiz-option">Sports</div>
+          </div>
+        </div>
+        
+        <button class="quiz-submit">Submit Answers</button>
+      </div>
+    </section>
+
+    <section id="fun-videos" class="section fade-in">
+      <h2 class="section-title">Fun Videos</h2>
+      <p>Ready for some birthday entertainment?</p>
+      
+      <div class="fun-videos">
+        <div class="video-prompt">Would you like to see some fun birthday videos?</div>
+        <div class="video-options">
+          <button class="video-option yes">Yes, show me!</button>
+          <button class="video-option no">Maybe later</button>
+        </div>
+        
+        <div class="video-grid hidden">
+          <div class="video-item">
+            <div class="video-placeholder">Video Placeholder</div>
+            <div class="video-title">Birthday Memories Montage</div>
+          </div>
+          <div class="video-item">
+            <div class="video-placeholder">Video Placeholder</div>
+            <div class="video-title">Friends' Birthday Wishes</div>
+          </div>
+          <div class="video-item">
+            <div class="video-placeholder">Video Placeholder</div>
+            <div class="video-title">18th Birthday Surprise!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="future-letter" class="section fade-in">
+      <h2 class="section-title">Letter to Your Future Self</h2>
+      <p>A special note to read on your 21st birthday!</p>
+      
+      <div class="future-letter">
+        <div class="letter-content">
+          <p>Dear Future [Birthday Person],</p>
+          <p>Today, on your 18th birthday, I'm writing this letter that you'll read when you turn 21. Right now, you're just beginning your adult journey, filled with excitement, hopes, and maybe a little uncertainty about what lies ahead.</p>
+          <p>I hope that in these three years, you've pursued your passions and dreams. I hope you've made mistakes and learned from them. I hope you've made new friends while keeping the old ones close. I hope you've discovered more about yourself and what truly makes you happy.</p>
+          <p>Remember that challenges are opportunities for growth, and setbacks are just setups for comebacks. Stay true to yourself and the values you hold dear.</p>
+          <p>Most importantly, I hope you're happy and proud of the person you've become. Know that everyone who celebrated with you on your 18th birthday continues to cheer you on every step of the way.</p>
+          <p>Happy 21st Birthday!</p>
+          <p>With love,<br>Your 18-year-old self</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificate" class="section fade-in">
+      <h2 class="section-title">Official Certificate</h2>
+      <p>A formal recognition of your milestone!</p>
+      
+      <div class="certificate">
+        <h3 class="certificate-title">Certificate of Adulthood</h3>
+        <div class="certificate-text">
+          <p>This certifies that</p>
+          <div class="certificate-name">[Birthday Person's Name]</div>
+          <p>has officially turned 18 years old and is hereby recognized as an adult with all the rights, privileges, and responsibilities that come with it.</p>
+          <p>May your adult journey be filled with success, happiness, and endless opportunities!</p>
+        </div>
+        <div class="certificate-date">March 13, 2025</div>
+        <div class="seal">OFFICIAL SEAL</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-text">With love from all your friends and family ❤️</div>
+    <a href="#home" class="back-to-top">Back to Top</a>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Update active link
+          document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Scroll to section
+          const targetId = this.getAttribute('href');
+          document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      
+      // Quiz options selection
+      document.querySelectorAll('.quiz-option').forEach(option => {
+        option.addEventListener('click', function() {
+          // Remove selected class from siblings
+          const parent = this.parentElement;
+          parent.querySelectorAll('.quiz-option').forEach(opt => {
+            opt.classList.remove('selected');
+          });
+          
+          // Add selected class to clicked option
+          this.classList.add('selected');
+        });
+      });
+      
+      // Quiz submit button
+      document.querySelector('.quiz-submit').addEventListener('click', function() {
+        alert('Thanks for taking the quiz! You know the birthday person really well!');
+      });
+      
+      // Video section buttons
+      document.querySelector('.video-option.yes').addEventListener('click', function() {
+        document.querySelector('.video-grid').classList.remove('hidden');
+      });
+      
+      document.querySelector('.video-option.no').addEventListener('click', function() {
+        alert('No problem! You can check the videos later if you change your mind.');
+      });
+      
+      // Show sections when scrolled into view
+      const sections = document.querySelectorAll('.section');
+      
+      const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      sections.forEach(section => {
+        fadeInObserver.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
